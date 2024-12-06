@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is inside a div.
+  </div>
+
+  <script>
+    // Solution 1: Optional chaining
+    let myVar = document.getElementById('myDiv')?.nonExistentAttribute;
+    console.log(myVar); // Logs undefined
+
+    // Solution 2: Check for attribute existence
+    const myDiv = document.getElementById('myDiv');
+    if (myDiv.hasAttribute('nonExistentAttribute')) {
+      myVar = myDiv.getAttribute('nonExistentAttribute');
+      console.log(myVar);
+    } else {
+      console.log('Attribute does not exist.');
+    }
+  </script>
+</body>
+</html>
