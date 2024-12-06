@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is inside a div.
+  </div>
+
+  <script>
+    // Attempting to access a non-existent attribute
+    let myVar = document.getElementById('myDiv').nonExistentAttribute; 
+    console.log(myVar); //This will result in undefined, not an error.
+  </script>
+</body>
+</html>
